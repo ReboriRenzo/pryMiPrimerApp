@@ -12,6 +12,12 @@ namespace pryMiPrimerApp
 {
     public partial class frmGestiónDeGastosMensuales : Form
     {
+        private decimal varAlquiler;
+        private decimal varImpuestos;
+        private decimal varComidas;
+        private decimal varSalidas;
+        private decimal varDeposito;
+
         public frmGestiónDeGastosMensuales()
         {
             InitializeComponent();
@@ -53,6 +59,50 @@ namespace pryMiPrimerApp
         }
 
         private void frmGestiónDeGastosMensuales_Load(object sender, EventArgs e)
+        {
+            //declaracion de variables
+
+            decimal varDepositos, varAlquiler, varImpuestos, varComidas, varSalidas;
+
+            //inicializar variables
+
+            varDepositos = 0;
+            varAlquiler = 0;
+            varImpuestos = 0;
+            varComidas = 0;
+            varSalidas = 0;
+
+
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            varDeposito = Convert.ToDecimal(txtDeposito.Text);
+            varAlquiler = Convert.ToDecimal(txtAlquiler.Text);
+            varImpuestos = Convert.ToDecimal(txtImpuestos.Text);
+            varComidas = Convert.ToDecimal(txtComidas.Text);
+            varSalidas = Convert.ToDecimal(txtSalidas.Text);
+
+            varSalidas = varDeposito - (varAlquiler + varImpuestos + varComidas + varSalidas);
+            lblCalculo.Text = "Resultado: " + varSalidas.ToString();
+           
+
+            //concatenar
+
+            lblCalculo.Text = "Resultado: " + varSalidas.ToString();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDeposito_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtComidas_TextChanged(object sender, EventArgs e)
         {
 
         }

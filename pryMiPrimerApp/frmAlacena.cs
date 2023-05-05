@@ -12,9 +12,64 @@ namespace pryMiPrimerApp
 {
     public partial class frmAlacena : Form
     {
+        //declaracion de variable
+
+        string varLugar, varProductos;
+        int varCantidad;
+        DateTime varFechaDeVencimiento;
         public frmAlacena()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            varLugar = txtLugar.Text;
+            varProductos = txtProducto.Text;
+            varCantidad = Convert.ToInt32(nudCantidad.Value);
+            //varCantidad = int.Parase(nudCantidad.Value);
+            
+            varFechaDeVencimiento = dtpFechaDeVencimiento.Value;
+        }
+
+        private void frmAlacena_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
