@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlacena));
             this.txtAlmacen = new System.Windows.Forms.GroupBox();
-            this.txtProducto = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.Label();
-            this.lstProducto = new System.Windows.Forms.ComboBox();
-            this.chkLimpieza = new System.Windows.Forms.CheckBox();
-            this.chkComida = new System.Windows.Forms.CheckBox();
-            this.chkBebidas = new System.Windows.Forms.CheckBox();
-            this.txtFechaDeVencimiento = new System.Windows.Forms.GroupBox();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
-            this.dtpFechaDeVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.chkBebidas = new System.Windows.Forms.CheckBox();
+            this.chkComida = new System.Windows.Forms.CheckBox();
+            this.chkLimpieza = new System.Windows.Forms.CheckBox();
             this.lstLugar = new System.Windows.Forms.ComboBox();
+            this.lstProducto = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.Label();
+            this.txtProducto = new System.Windows.Forms.Label();
             this.txtLugar = new System.Windows.Forms.Label();
+            this.txtFechaDeVencimiento = new System.Windows.Forms.GroupBox();
+            this.dtpFechaDeVencimiento = new System.Windows.Forms.DateTimePicker();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.Lista = new System.Windows.Forms.ListBox();
             this.txtAlmacen.SuspendLayout();
-            this.txtFechaDeVencimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            this.txtFechaDeVencimiento.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAlmacen
@@ -67,27 +68,61 @@
             this.txtAlmacen.TabStop = false;
             this.txtAlmacen.Text = "Almacen";
             // 
-            // txtProducto
+            // nudCantidad
             // 
-            this.txtProducto.AutoSize = true;
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(116, 30);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(81, 20);
-            this.txtProducto.TabIndex = 1;
-            this.txtProducto.Text = "Producto";
-            this.txtProducto.Click += new System.EventHandler(this.label2_Click);
+            this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCantidad.Location = new System.Drawing.Point(212, 56);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(83, 26);
+            this.nudCantidad.TabIndex = 8;
             // 
-            // txtCantidad
+            // chkBebidas
             // 
-            this.txtCantidad.AutoSize = true;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(208, 30);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(81, 20);
-            this.txtCantidad.TabIndex = 2;
-            this.txtCantidad.Text = "Cantidad";
-            this.txtCantidad.Click += new System.EventHandler(this.label3_Click);
+            this.chkBebidas.AutoSize = true;
+            this.chkBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBebidas.Location = new System.Drawing.Point(212, 91);
+            this.chkBebidas.Name = "chkBebidas";
+            this.chkBebidas.Size = new System.Drawing.Size(71, 17);
+            this.chkBebidas.TabIndex = 7;
+            this.chkBebidas.Text = "Bebidas";
+            this.chkBebidas.UseVisualStyleBackColor = true;
+            // 
+            // chkComida
+            // 
+            this.chkComida.AutoSize = true;
+            this.chkComida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkComida.Location = new System.Drawing.Point(109, 91);
+            this.chkComida.Name = "chkComida";
+            this.chkComida.Size = new System.Drawing.Size(67, 17);
+            this.chkComida.TabIndex = 6;
+            this.chkComida.Text = "Comida";
+            this.chkComida.UseVisualStyleBackColor = true;
+            // 
+            // chkLimpieza
+            // 
+            this.chkLimpieza.AutoSize = true;
+            this.chkLimpieza.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkLimpieza.Location = new System.Drawing.Point(15, 91);
+            this.chkLimpieza.Name = "chkLimpieza";
+            this.chkLimpieza.Size = new System.Drawing.Size(75, 17);
+            this.chkLimpieza.TabIndex = 5;
+            this.chkLimpieza.Text = "Limpieza";
+            this.chkLimpieza.UseVisualStyleBackColor = true;
+            this.chkLimpieza.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // lstLugar
+            // 
+            this.lstLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstLugar.FormattingEnabled = true;
+            this.lstLugar.Items.AddRange(new object[] {
+            "Lavanderia",
+            "Almacen",
+            "Heladera"});
+            this.lstLugar.Location = new System.Drawing.Point(6, 53);
+            this.lstLugar.Name = "lstLugar";
+            this.lstLugar.Size = new System.Drawing.Size(97, 28);
+            this.lstLugar.TabIndex = 4;
+            this.lstLugar.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // lstProducto
             // 
@@ -105,39 +140,38 @@
             this.lstProducto.Size = new System.Drawing.Size(97, 28);
             this.lstProducto.TabIndex = 3;
             // 
-            // chkLimpieza
+            // txtCantidad
             // 
-            this.chkLimpieza.AutoSize = true;
-            this.chkLimpieza.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkLimpieza.Location = new System.Drawing.Point(15, 91);
-            this.chkLimpieza.Name = "chkLimpieza";
-            this.chkLimpieza.Size = new System.Drawing.Size(75, 17);
-            this.chkLimpieza.TabIndex = 5;
-            this.chkLimpieza.Text = "Limpieza";
-            this.chkLimpieza.UseVisualStyleBackColor = true;
-            this.chkLimpieza.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.txtCantidad.AutoSize = true;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(208, 30);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(81, 20);
+            this.txtCantidad.TabIndex = 2;
+            this.txtCantidad.Text = "Cantidad";
+            this.txtCantidad.Click += new System.EventHandler(this.label3_Click);
             // 
-            // chkComida
+            // txtProducto
             // 
-            this.chkComida.AutoSize = true;
-            this.chkComida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkComida.Location = new System.Drawing.Point(109, 91);
-            this.chkComida.Name = "chkComida";
-            this.chkComida.Size = new System.Drawing.Size(67, 17);
-            this.chkComida.TabIndex = 6;
-            this.chkComida.Text = "Comida";
-            this.chkComida.UseVisualStyleBackColor = true;
+            this.txtProducto.AutoSize = true;
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(116, 30);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(81, 20);
+            this.txtProducto.TabIndex = 1;
+            this.txtProducto.Text = "Producto";
+            this.txtProducto.Click += new System.EventHandler(this.label2_Click);
             // 
-            // chkBebidas
+            // txtLugar
             // 
-            this.chkBebidas.AutoSize = true;
-            this.chkBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBebidas.Location = new System.Drawing.Point(212, 91);
-            this.chkBebidas.Name = "chkBebidas";
-            this.chkBebidas.Size = new System.Drawing.Size(71, 17);
-            this.chkBebidas.TabIndex = 7;
-            this.chkBebidas.Text = "Bebidas";
-            this.chkBebidas.UseVisualStyleBackColor = true;
+            this.txtLugar.AutoSize = true;
+            this.txtLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugar.Location = new System.Drawing.Point(21, 30);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(55, 20);
+            this.txtLugar.TabIndex = 0;
+            this.txtLugar.Text = "Lugar";
+            this.txtLugar.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFechaDeVencimiento
             // 
@@ -150,14 +184,6 @@
             this.txtFechaDeVencimiento.TabStop = false;
             this.txtFechaDeVencimiento.Text = "Fecha de Vencimiento";
             // 
-            // nudCantidad
-            // 
-            this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCantidad.Location = new System.Drawing.Point(212, 56);
-            this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(83, 26);
-            this.nudCantidad.TabIndex = 8;
-            // 
             // dtpFechaDeVencimiento
             // 
             this.dtpFechaDeVencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,31 +192,6 @@
             this.dtpFechaDeVencimiento.Name = "dtpFechaDeVencimiento";
             this.dtpFechaDeVencimiento.Size = new System.Drawing.Size(292, 26);
             this.dtpFechaDeVencimiento.TabIndex = 0;
-            // 
-            // lstLugar
-            // 
-            this.lstLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstLugar.FormattingEnabled = true;
-            this.lstLugar.Items.AddRange(new object[] {
-            "Lavanderia",
-            "Almacen",
-            "Heladera"});
-            this.lstLugar.Location = new System.Drawing.Point(6, 53);
-            this.lstLugar.Name = "lstLugar";
-            this.lstLugar.Size = new System.Drawing.Size(97, 28);
-            this.lstLugar.TabIndex = 4;
-            this.lstLugar.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
-            // txtLugar
-            // 
-            this.txtLugar.AutoSize = true;
-            this.txtLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugar.Location = new System.Drawing.Point(21, 30);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(55, 20);
-            this.txtLugar.TabIndex = 0;
-            this.txtLugar.Text = "Lugar";
-            this.txtLugar.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmdGuardar
             // 
@@ -229,13 +230,14 @@
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.txtFechaDeVencimiento);
             this.Controls.Add(this.txtAlmacen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlacena";
             this.Text = "Alacena";
             this.Load += new System.EventHandler(this.frmAlacena_Load);
             this.txtAlmacen.ResumeLayout(false);
             this.txtAlmacen.PerformLayout();
-            this.txtFechaDeVencimiento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            this.txtFechaDeVencimiento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

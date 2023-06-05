@@ -33,5 +33,12 @@ namespace pryMiPrimerApp
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmLogIn v = new frmLogIn();
+
+            v.ShowDialog();
+        }
     }
 }

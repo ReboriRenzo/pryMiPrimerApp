@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.cmdFinanzas = new System.Windows.Forms.Button();
             this.cmdAlacena = new System.Windows.Forms.Button();
+            this.cmdLogIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdFinanzas
@@ -57,13 +59,28 @@
             this.cmdAlacena.UseVisualStyleBackColor = false;
             this.cmdAlacena.Click += new System.EventHandler(this.cmdAlacena_Click);
             // 
+            // cmdLogIn
+            // 
+            this.cmdLogIn.BackColor = System.Drawing.Color.Lime;
+            this.cmdLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLogIn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.cmdLogIn.Location = new System.Drawing.Point(12, 142);
+            this.cmdLogIn.Name = "cmdLogIn";
+            this.cmdLogIn.Size = new System.Drawing.Size(127, 56);
+            this.cmdLogIn.TabIndex = 2;
+            this.cmdLogIn.Text = "LogIn";
+            this.cmdLogIn.UseVisualStyleBackColor = false;
+            this.cmdLogIn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(145, 140);
+            this.ClientSize = new System.Drawing.Size(145, 216);
+            this.Controls.Add(this.cmdLogIn);
             this.Controls.Add(this.cmdAlacena);
             this.Controls.Add(this.cmdFinanzas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -74,5 +91,6 @@
 
         private System.Windows.Forms.Button cmdFinanzas;
         private System.Windows.Forms.Button cmdAlacena;
+        private System.Windows.Forms.Button cmdLogIn;
     }
 }
