@@ -47,14 +47,14 @@ namespace pryMiPrimerApp
 
         private void lblContraseña_TextChanged(object sender, EventArgs e)
         {
-            lblPass.ForeColor = Color.White;
-            lblPass.UseSystemPasswordChar = true;   
+            txtContraseña.ForeColor = Color.White;
+            txtContraseña.UseSystemPasswordChar = true;   
         }
 
         private void lblNombreDeUsuario_TextChanged(object sender, EventArgs e)
         {
-            lblNombreDeUsuario.ForeColor = Color.White;
-            lblNombreDeUsuario.UseSystemPasswordChar= false;
+            txtNombreDeUsuario.ForeColor = Color.White;
+            txtNombreDeUsuario.UseSystemPasswordChar= false;
         }
     }
 }
